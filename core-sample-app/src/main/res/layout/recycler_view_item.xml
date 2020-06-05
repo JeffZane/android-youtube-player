@@ -1,9 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/youtube_player_view"
+<com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.SixteenByNineFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_root"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="wrap_content">
 
-    app:showFullScreenButton="false" />
+    <FrameLayout
+        android:id="@+id/fl_control"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ayp_menu_icons">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/nb_ic_play_button" />
+
+        <ProgressBar
+            android:id="@+id/loading_view"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@android:color/white"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </FrameLayout>
+
+</com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.SixteenByNineFrameLayout>
